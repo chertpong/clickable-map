@@ -1,0 +1,20 @@
+/*animation*/
+/*.path {*/
+    /*stroke-dasharray: 100;*/
+    /*animation: dash 5s linear;*/
+/*}*/
+
+/*@keyframes dash {*/
+    /*to {*/
+        /*stroke-dashoffset: 1000;*/
+    /*}*/
+/*}*/
+
+.boot{
+    stroke: #F44336;
+    stroke-width: 2;
+    fill: #F44336;
+}
+#map{
+    background-color: #4CAF50;
+}
