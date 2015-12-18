@@ -19,12 +19,21 @@ $(
                     .attr("d",genBoxPoint(startX,startY,sideLength))
                     .attr("id",'boot-x'+j+'-y'+i)
                     .attr("class","boot")
+                    .attr("title","test title")
+                    .attr("data-toggle","tooltip")
                     .on({
                         click:function(){
                            $("#boot-info-modal").modal('show');
                             $("#boot-info-modal-title").text(this.id);
+                        },
+                        mouseenter:function(){
+                            $(this).css("fill","blue").css("stroke","blue");
+                        },
+                        mouseleave:function(){
+                            $(this).css("fill","#F44336").css("stroke","#F44336");
                         }
                     });
+                $('#'+'boot-x'+j+'-y'+i).tooltip({container:"body"});
                 startX+= xSpaceLength+sideLength;
             }
             startY+= ySpaceLength+sideLength;
